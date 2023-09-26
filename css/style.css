@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-main {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-main {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #696969;
+}
+
+.footer-main-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-sitemap {
+  flex-basis: 100%;
+  display: flex;
+}
+
+.footer-sitemap ul:nth-child(1) {
+  border-left: 3px solid white;
+  padding-left: 5px;
+}
+
+.footer-sitemap ul:nth-child(1), .footer-sitemap ul:nth-child(2) {
+  flex-basis: 150px;
+}
+
+.footer-sitemap ul:nth-child(2) {
+  display: inline;
+  margin: 0 10px;
+  flex-grow: 1;
+}
+
+.footer-sitemap ul:nth-child(2) li {
+  clear: both;
+  float: right;
+}
+
+.footer-sitemap ul:nth-child(2) li:nth-child(1) {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.footer-sitemap li, .footer-sitemap a {
+  line-height: 30px;
+  color: white;
+}
+
+.footer-sitemap a:hover {
+  color: antiquewhite;
+}
+
+.wrapper-main {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.header-logo{
+  width: fit-content;
+  height: 100%;
+  padding-left: 10px;
+  display: flex;
+}
+
+.header-logo img{
+  height: 60px;
+  align-self: center;
+}
+
+.header-nav{
+  width: fit-content;
+  height: 100%;
+}
+
+.header-nav ul, .footer-sitemap ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header-nav ul li, .footer-sitemap ul:nth-child(1) {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+}
+
+.header-nav ul li a{
+  color: white;
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+.header-nav ul li a:hover{
+  padding: 0 10px;
+}
+
+.header-nav-hover {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+
+.header-nav-hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.25s ease-out
+}
+
+.header-nav-hover:hover::before {
+  width: 100%;
+}
+
+.header-sm{
+  width: fit-content;
+  height: 100%;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.header-sm-fb {
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/facebook.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-sm-fb:hover {
+  background-image: url(../img/facebook-color.png);
+}
+
+.header-sm-ig {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/instagram.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 5px;
+}
+
+.header-sm-ig:hover {
+  background-image: url(../img/instagram-color.png);
+}
+
+.header-sm-x {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/twitter.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-sm-x:hover {
+  margin: 0 7.5px;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/x.png);
+}
+
+/* First Page (Black with Logo) */
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 1s;
+}
+
+.logo {
+  width: 400px; /* Adjust the size of your logo */
+  height: auto;
+}
+
+/* Second Page (About Us) */
+.about-us {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-card {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-card:hover {
+  transform: scale(1.1);
+}
+
+/* Third Page (Contact Us) */
+.contact-us {
+  background-color: #f0f0f0; /* Light gray background */
+  color: black;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.name-group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.name-input {
+  width: 48%;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#message {
+  resize: none;
+}
